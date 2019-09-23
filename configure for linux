@@ -1,0 +1,40 @@
+           Facebook SIGN-IN and GET Profile IMAGE, NAME, EMAIL
+
+Go to Google -> facebook for developers -> My Apps -> Add New App -> enter Display Name & Email -> Click “Create App Id” -> Docs ->Go Down -> Facebook Login -> Android -> Select Your AppName in Step1. 
+Select An App or Create a New App -> Go to step3 and Copy Paste using (maven) step 1 and step 2 and – change Facebook login version ->
+“
+Implementation ‘com.facebook.android : facebook_login : 4.40.0’
+“
+Go to Step 4 and Copy text and paste into /app/res/values/strings.xml -> copy paste internet permission in Manifest file -> 
+Step 5 -> 
+Copy <meta – data …./>
+          <activity ………/> into  <application>
+                                                   </application>    tag ->
+Go to Step 5. Associate your Package Name……. ->
+Copy & Paste Your App  ‘ com.example.app & com.example.myapp.MainActivity -> Click Save.
+    • Go to Step 6 -> Select windows -> Click Google Code Archive ->  Select 3rd link “ openssl-0.9.8k_X64.zip”
+    • Then Go to DOS Prompt-> Open DOS in windows
+    • Download “openssl … & extract this file and open this folder and Copy all sub folder into this “Openssl -0.9.8k_X64”.
+    • And paste (C:\openssl) in C: (or) E: (or) F: folder which means java package Drive (C,D,E,F) -> 
+
+    • Open java/jdk1.8.0_101/bin ->
+    • C:users/user/cd C:\Program Files\Java\jdk1.8.0_101\bin
+    • C:\Program Files\Java\jdk1.8.0_101\bin>
+
+C:\Program Files\Java\jdk1.8.0_101\bin>cd  C:\openssl
+C:\openssl>cd bin
+C:\openssl\bin>openssl
+Openssl>exit
+
+C:\openssl\bin>keytool –exportcert –alias androiddebugkey –keystore C:\Users\user\android\debug.keystore | openssl sha1 –binary | openssl enc –a –e
+
+ Me3LKw12/reB0+lsdkfjjesdfdhfsldkfsfleweo3993 - key
+
+
+For  Linux : 
+hitasoft@hts-service-40:~$ keytool -exportcert -alias lilbrahmas -keystore /home/hitasoft/Work.customization/LilBrahmas/lilbrahmas.jks | openssl sha1 -binary | openssl base64
+Enter keystore password:  lilbrahmas
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /home/hitasoft/Work.customization/LilBrahmas/lilbrahmas.jks -destkeystore /home/hitasoft/Work.customization/LilBrahmas/lilbrahmas.jks -deststoretype pkcs12".
+gVv2oAsiQXn2XeraPMnljQQBCr8=
